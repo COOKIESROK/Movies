@@ -11,11 +11,9 @@
 # === script index =============================================================
 
 # 1.main.R        
-# 2.data.manip.R
-# 3.analysis.R
-# 4.functions.R
-## and this can apply to figure functions too
-# 5.figures.R
+# 2.machine.learning.R
+# 3.input.R <- DO NOT RUN IT DOESN'T WORK AND WILL MESS WITH THE REST OF THE CODE
+# 4.figures.R
 #
 # === global variables =========================================================
 
