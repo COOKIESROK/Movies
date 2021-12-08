@@ -97,14 +97,11 @@ similarity_mat <- similarity(ratingMatrix[1:4, ],
                              method = "cosine",
                              which = "users")
 as.matrix(similarity_mat)
-# generating visualization of the matrix
-image(as.matrix(similarity_mat), main = "User's Similarities")
 
 # same process but for movie similarity
 movie_similarity <- similarity(ratingMatrix[, 1:4], method =
                                  "cosine", which = "items")
 as.matrix(movie_similarity)
-image(as.matrix(movie_similarity), main = "Movies similarity")
 
 # extracting values from the matrix so the unique ones can be counted
 rating_values <- as.vector(ratingMatrix@data)
@@ -139,7 +136,8 @@ movie_ratings <- ratingMatrix[rowCounts(ratingMatrix) > 50,
 
 average_ratings <- rowMeans(movie_ratings)
 # displaying distribution of the average rating per user
-qplot(average_ratings, fill=I("steelblue"), col=I("red")) +
+qplot(average_ratings, fill=I("steelblue"), col=I("black"), ylab = "frequency", 
+      xlim = c(0, 5)) +
   ggtitle("Distribution of the average rating per user")
 
 # normalizing movie data 
