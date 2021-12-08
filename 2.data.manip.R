@@ -4,8 +4,8 @@
 # recommendations based on previous watches and trending films/shows. Our group 
 # has set out to create our own Reccomendation system based on user preferences 
 # and browsing history using machine learning and the MovieLens dataset. This 
-# dataset consists of 105339 ratings applied over 10329 movies. Our reccomendation 
-# system will utilize this dataset and user data to provide reccomendatiosn for 
+# dataset consists of 105339 ratings applied over 10329 movies. Our recommendation 
+# system will utilize this dataset and user data to provide recommendations for 
 # future content consumption.
 
 # === 1) read raw data =========================================================
