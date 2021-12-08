@@ -59,9 +59,9 @@ wk.dir
  library('ggplot2')
  library('data.table')
  library('reshape2')
- library(recommenderlab)
  library("irlba")
- library(digest)
+ library("digest")
+
 # === folder management ========================================================
 
 ## names of project folders("a.figures","b.data.raw","c.data.clean","d.results")
