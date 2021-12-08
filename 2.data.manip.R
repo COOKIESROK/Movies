@@ -1,11 +1,15 @@
 
-# === description ===========================================================================
+# === description ==============================================================
 # Streaming services like Netflix, Amazon Prime, Hulu, etc. offer users content 
 # recommendations based on previous watches and trending films/shows. Our group 
-# has set out to create our own Reccomendation system based on user preferences 
+# has set out to create our own Recommendation system based on user preferences 
 # and browsing history using machine learning and the MovieLens dataset. This 
 # dataset consists of 105339 ratings applied over 10329 movies. Our recommendation 
+<<<<<<< HEAD
 # system will utilize this dataset and user data to provide recommendations for 
+=======
+# system will utilize this dataset and user data to provide recommendatiosn for 
+>>>>>>> e2207a29f49c2a91db98765becac32af33f03222
 # future content consumption.
 
 # === 1) read raw data =========================================================
@@ -125,8 +129,8 @@ table_views$title <- NA
 # creating a loop that will fill in every row with the movie title
 for (index in 1: nrow(table_views)){
   table_views[index,3] <- as.character(subset
-                                       (movie_data,
-                                        movie_data$movieId == table_views[index,1])$title)
+                  (movie_data,
+                  movie_data$movieId == table_views[index,1])$title)
 }
 
 head(table_views)
@@ -150,8 +154,8 @@ sampled_data<- sample(x = c(TRUE, FALSE),
                       replace = TRUE,
                       prob = c(0.8, 0.2))
 
-# creating training data for the AI program and testing data (which are not the 
-# same) to see if the model works
+# creating training data for the AI program and testing data (which are not  
+# the same) to see if the model works
 training_data <- movie_ratings[sampled_data, ]
 testing_data <- movie_ratings[!sampled_data, ]
 
@@ -212,10 +216,10 @@ recommended_movie_titles <- recommended_movies
 
 # for (index in 1:10){
 #   recommended_movie_titles[index] <- as.character(subset(movie_data,
-#                                              movie_data$movieId == recommended_movies[index])$title)
+#                      movie_data$movieId == recommended_movies[index])$title)
 # }
 # 
 # # creating matrix with the recommendations for each user
 # recommendation_matrix <- sapply(predicted_recommendations@items,
-#                                 function(x){ as.integer(colnames(movie_ratings)[x]) }) 
+#                        function(x){ as.integer(colnames(movie_ratings)[x]) }) 
 # recommendation_matrix[,1:4]
